@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { StyleSheet, TextInput, Button, View, Alert } from 'react-native';
+import {THEME} from './../theme'
+
 
 export default function AddTodo({ onSubmit }) {
     const [value, setValue] = useState('')
-
-
-
 
     const pressHandler = () => {
         if(value.trim()){
@@ -16,6 +15,7 @@ export default function AddTodo({ onSubmit }) {
         }
        
     }
+
     return (
         <View style={styles.block}>
             <TextInput
@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
         padding: 10,
         borderStyle: 'solid',
         borderBottomWidth: 2,
-        borderBottomColor: '#3949ab'
+        borderBottomColor: THEME.MAIN_COLOR
     }
 });

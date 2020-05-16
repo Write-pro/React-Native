@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 
 
-export default function Todo({todo, onRemove}) {
+export default function Todo({todo, onRemove, onOpen}) {
 
 
   return (
@@ -10,7 +10,7 @@ export default function Todo({todo, onRemove}) {
    <TouchableOpacity
     activeOpacity={0.1}
     onPress={()=>{
-      console.log('hello)))');
+      return onOpen(todo.id)
     }}
     onLongPress={()=> onRemove(todo.id)}
    >
