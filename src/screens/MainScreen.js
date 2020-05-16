@@ -18,8 +18,11 @@ export default function MainScreen({ addTodo, todos, removeTodo, openTodo }) {
 
   if (todos.length === 0) {
     content = (
-      <View>
-        <Image  source={require('../../assetss/no-items.png')}/>
+      <View style={styles.imgWrap}>
+        <Image
+          source={require('../../assets/no-items.png')}
+          style={styles.image}
+        />
       </View>
     )
   }
@@ -33,7 +36,15 @@ export default function MainScreen({ addTodo, todos, removeTodo, openTodo }) {
 }
 
 const styles = StyleSheet.create({
-  imgWrap:{
-
+  imgWrap: {
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 10,
+    height: 300
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'contain'
   }
 });

@@ -14,6 +14,7 @@ export default function EditModal({ visible, onCancel, value, onSave }) {
             onSave(title)
         }
     }
+
     return (
         <Modal visible={visible}
             animationType="slide"
@@ -36,7 +37,6 @@ export default function EditModal({ visible, onCancel, value, onSave }) {
                     <Button title='Сохранить'
                         onPress={() => saveHandler()}
                     />
-
                 </View>
             </View>
         </Modal>
